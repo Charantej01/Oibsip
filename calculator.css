@@ -1,7 +1,6 @@
-
-.calculators {
-  width: 200px;
-  margin: 50px auto;
+.calculator {
+  width: 250px;
+  margin: auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -14,10 +13,22 @@ input {
   padding: 5px;
 }
 
-.buttons button {
-   width :48px;
-   height :48px;
-   margin: 2px;
-   font-size: 21px;
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
+.buttons button {
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+}
+
+.equal {
+  width: 100%;
+}
+
+.zero {
+  width: 100px;
+}
