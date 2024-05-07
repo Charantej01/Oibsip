@@ -1,31 +1,16 @@
-let displayValue = '';
-
-function append_Number(number) {
-  displayValue += number;
-  updateDisplay();
-}
-
-function appendOperator(operator) {
-  displayValue += operator;
-  updateDisplay();
+function appendToDisplay(value) {
+  document.getElementById('display').value += value;
 }
 
 function clearDisplay() {
-  displayValue = '';
-  updateDisplay();
+  document.getElementById('display').value = '';
 }
 
-function calculateResult() {
+function calculate() {
   try {
-    const result = eval(displayValue);
-    displayValue = result.toString();
-    updateDisplay();
+    const result = eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
   } catch (error) {
-    displayValue = 'Error';
-    updateDisplay();
+    document.getElementById('display').value = 'Error';
   }
-}
-
-function updateDisplay() {
-  document.getElementById('display').value = displayValue;
 }
